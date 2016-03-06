@@ -24,15 +24,15 @@ module.exports = {
     loaders: [
       { test: /\.ts$/, loader: 'ts-loader' },
     ],
-    // noParse: [
-    //   root('node_modules/angular2/bundles/angular2-polyfills'),
-    //   root('node_modules/angular2/bundles'),
-    //   root('node_modules/zone.js/dist'),
-    //   root('node_modules/zone.js/dist/zone-microtask'),
-    //   root('node_modules/es6-shim'),
-    //   root('node_modules/es6-promise'),
-    //   root('node_modules/reflect-metadata')
-    // ]
+    noParse: [
+      root('node_modules/angular2/bundles/angular2-polyfills'),
+      root('node_modules/angular2/bundles'),
+      root('node_modules/zone.js/dist'),
+      root('node_modules/zone.js/dist/zone-microtask'),
+      root('node_modules/es6-shim'),
+      root('node_modules/es6-promise'),
+      root('node_modules/reflect-metadata')
+    ]
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({ name: ['no_uglify', 'polyfills'], filename: '[name].bundle.js', minChunks: Infinity }),
