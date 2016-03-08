@@ -1,6 +1,12 @@
-import {bootstrap} from 'angular2/platform/browser';
+import {provide, bootstrap} from 'angular2/platform/browser';
 import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+import {
+  RouteConfig,
+  ROUTER_DIRECTIVES,
+  ROUTER_PROVIDERS,
+  LocationStrategy,
+  HashLocationStrategy
+} from 'angular2/router';
 
 
 @Component({
@@ -45,6 +51,7 @@ export class App {
 }
 
 bootstrap(App, [
-  ROUTER_PROVIDERS
+  ROUTER_PROVIDERS,
+  provide(LocationStrategy, { useClass: HashLocationStrategy })
 ])
 .catch(err => console.error(err));
