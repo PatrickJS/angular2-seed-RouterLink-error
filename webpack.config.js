@@ -67,7 +67,7 @@ module.exports = {
       },
       // mangle: false // false to get it to work
       mangle: {
-        except: ['RouterLink']
+        // except: ['RouterLink']
       }
 
     })
