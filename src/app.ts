@@ -1,5 +1,5 @@
-import {provide, bootstrap} from 'angular2/platform/browser';
-import {Component} from 'angular2/core';
+import {bootstrap} from 'angular2/platform/browser';
+import {provide, Component} from 'angular2/core';
 import {
   RouteConfig,
   ROUTER_DIRECTIVES,
